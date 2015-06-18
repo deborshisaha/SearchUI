@@ -8,11 +8,12 @@ Version 1.0
  * AFNetworking - To make API call to Google's Geocoding API
  * Google's geocode API - To make location suggestion
 
-### Integrating
+### Installation
 It is very simple to integrate this library into your project. To integrate this project, 
  * Drag & drop 'AFNetworking' folder and 'DSSearchUI' folder into your project.
  * Enable Google's Geocoding API from here. This would give you an API key. Add this API Key in "GeocodingAPIKey.h" file.
-
+ * Pods coming soon
+ 
 ### Usage
 
 ```objective-c
