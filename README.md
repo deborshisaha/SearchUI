@@ -20,7 +20,9 @@ It is very simple to integrate this library into your project. To integrate this
 @interface MasterViewController () <DSLocationBasedSearchUIDelegate>
 @property (nonatomic, strong)DSLocationBasedSearchUI *searchUI;
 @end
-...
+
+@implementation MasterViewController
+
 - (void)viewDidLoad {
 ...
     if (!_searchUI) {
@@ -49,7 +51,8 @@ It is very simple to integrate this library into your project. To integrate this
 - (void) didSelectSearchedItemAtIndex:(NSInteger)index {
     NSLog(@"%s", __PRETTY_FUNCTION__);
 }
-```
+@end
+
 ### Contact
 Deborshi Saha (deborshi dot saha at gmail dot com)
 
