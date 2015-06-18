@@ -12,3 +12,6 @@ It is very simple to integrate this library into your project. To integrate this
 ** Enable Google's Geocoding API from here. This would give you an API key. Add this API Key in "GeocodingAPIKey.h" file.
 
 ## Usage
+
+## Contact
+Deborshi Saha (deborshi dot saha at gmail dot com)
