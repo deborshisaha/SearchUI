@@ -14,8 +14,40 @@ It is very simple to integrate this library into your project. To integrate this
 ** Enable Google's Geocoding API from here. This would give you an API key. Add this API Key in "GeocodingAPIKey.h" file.
 
 ### Usage
+
 ```objective-c
-NSMutableArray
+@interface MasterViewController () <DSLocationBasedSearchUIDelegate>
+@property (nonatomic, strong)DSLocationBasedSearchUI *searchUI;
+@end
+...
+- (void)viewDidLoad {
+...
+    if (!_searchUI) {
+        _searchUI = [[DSLocationBasedSearchUI alloc] initWithViewController:self];
+    }
+    
+    self.searchUI.tintColor = [UIColor colorWithRed:196.0f/255.0f green:2.0f/255.0f blue:2.0f/255.0f alpha:1.0f];
+    self.searchUI.delegate = self;
+    self.searchUI.searchUIFont = [UIFont fontWithName:@"AvenirNext-Medium" size:16.0f];
+...
+}
+
+#pragma mark DSLocationBasedSearchUIDelegate
+- (void) didStartEditingSearchText {
+    NSLog(@"%s",__PRETTY_FUNCTION__);
+}
+
+- (void) autoSuggestedLocationSelected:(DSAutoSuggestedLocation *)autoSuggestedLocationItem {
+    NSLog(@"%s", __PRETTY_FUNCTION__);
+}
+
+- (void) searchTextDidChange:(NSString *) text {
+    NSLog(@"%s", __PRETTY_FUNCTION__);
+}
+
+- (void) didSelectSearchedItemAtIndex:(NSInteger)index {
+    NSLog(@"%s", __PRETTY_FUNCTION__);
+}
 ```
 ### Contact
 Deborshi Saha (deborshi dot saha at gmail dot com)
