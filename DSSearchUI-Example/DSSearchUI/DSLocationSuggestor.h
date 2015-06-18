@@ -1,8 +1,8 @@
 //
-//  MasterViewController.h
-//  DSSearchUI-Example
+//  DSLocationSuggestor.h
+//  DSSearchUI
 //
-//  Created by Deborshi Saha on 6/18/15.
+//  Created by Deborshi Saha on 6/16/15.
 //  Copyright (c) 2015 Deborshi Saha. All rights reserved.
 //
 //	Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -25,8 +25,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MasterViewController : UITableViewController
+typedef void (^DSLocationSuggestorBlock)(id objectsv, NSError *err);
 
+@interface DSLocationSuggestor : UIView
 
++ (void) fetchAutoCompletedResultsForText:(NSString *) searchText inBackground:(DSLocationSuggestorBlock) block;
 @end
-

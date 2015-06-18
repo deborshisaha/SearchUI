@@ -1,8 +1,8 @@
 //
-//  MasterViewController.h
-//  DSSearchUI-Example
+//  DSAutoSuggestedLocation.h
+//  DSSearchUI
 //
-//  Created by Deborshi Saha on 6/18/15.
+//  Created by Deborshi Saha on 6/16/15.
 //  Copyright (c) 2015 Deborshi Saha. All rights reserved.
 //
 //	Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -23,10 +23,20 @@
 //	OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //	THE SOFTWARE.
 
-#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#import "DSAutosuggestedItemDelegate.h"
 
-@interface MasterViewController : UITableViewController
+@interface DSAutoSuggestedLocation : NSObject <DSAutosuggestedItemDelegate, NSCopying>
 
+@property (readonly, getter=isCurrentLocation) BOOL currentLocation;
+
+@property (nonatomic, strong) NSString *locality;
+@property (nonatomic, strong) NSString *city;
+@property (nonatomic, strong) NSString *country;
+@property (nonatomic, strong) NSString *state;
+@property (nonatomic, strong) NSString *pincode;
+
+- (instancetype) initWithDictionary: (NSDictionary *) dictionary;
+- (instancetype) initAsCurrentLocation;
 
 @end
-

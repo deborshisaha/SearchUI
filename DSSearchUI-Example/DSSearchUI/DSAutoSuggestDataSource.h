@@ -1,8 +1,8 @@
 //
-//  MasterViewController.h
-//  DSSearchUI-Example
+//  DSAutoSuggestDataSource.h
+//  DSSearchUI
 //
-//  Created by Deborshi Saha on 6/18/15.
+//  Created by Deborshi Saha on 6/16/15.
 //  Copyright (c) 2015 Deborshi Saha. All rights reserved.
 //
 //	Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -23,10 +23,10 @@
 //	OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //	THE SOFTWARE.
 
+#import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-@interface MasterViewController : UITableViewController
-
-
+@interface DSAutoSuggestDataSource: NSObject<UITableViewDataSource>
+@property (nonatomic, strong) NSArray *datasourceObjects;
+@property (nonatomic, strong) UIFont *font;
 @end
-

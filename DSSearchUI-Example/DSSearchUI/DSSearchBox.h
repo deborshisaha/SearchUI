@@ -1,8 +1,8 @@
 //
-//  MasterViewController.h
-//  DSSearchUI-Example
+//  DSSearchBox.h
+//  DSSearchUI
 //
-//  Created by Deborshi Saha on 6/18/15.
+//  Created by Deborshi Saha on 6/16/15.
 //  Copyright (c) 2015 Deborshi Saha. All rights reserved.
 //
 //	Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -25,8 +25,20 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MasterViewController : UITableViewController
+#define VERTICAL_PADDING 4.0f
+#define HORIZONTAL_PADDING 5.0f
+#define TEXTFIELD_HEIGHT 30.0f
 
+@interface DSSearchBox : UIView
+
+/*
+ *  Two input boxes
+ */
+@property (nonatomic, strong) UITextField *searchTextField;
+@property (nonatomic, strong) UITextField *locationTextField;
+
+@property (nonatomic, strong) NSString *locationTextFieldText;
+
+@property (nonatomic, strong) UIImage *searchIconImage;
 
 @end
-
