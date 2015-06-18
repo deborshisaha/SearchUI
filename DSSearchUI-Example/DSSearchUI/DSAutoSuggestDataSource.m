@@ -44,6 +44,9 @@
         cell = [[UITableViewCell alloc] initWithStyle: UITableViewCellStyleSubtitle reuseIdentifier:@"Cell"];
     }
     
+    // Clear previous data, incase the cell is being re-used
+    cell.imageView.image = nil;
+    
     cell.textLabel.font = self.font;
     cell.detailTextLabel.font = [UIFont fontWithName:self.font.fontName size:12.0f];
     
