@@ -52,6 +52,7 @@ It is very simple to integrate this library into your project. To integrate this
     NSLog(@"%s", __PRETTY_FUNCTION__);
 }
 @end
+```
 
 ### Contact
 Deborshi Saha (deborshi dot saha at gmail dot com)
