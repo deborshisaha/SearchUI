@@ -10,8 +10,8 @@ Version 1.0
 
 ### Integrating
 It is very simple to integrate this library into your project. To integrate this project, 
- ** Drag & drop 'AFNetworking' folder and 'DSSearchUI' folder into your project.
- ** Enable Google's Geocoding API from here. This would give you an API key. Add this API Key in "GeocodingAPIKey.h" file.
+ * Drag & drop 'AFNetworking' folder and 'DSSearchUI' folder into your project.
+ * Enable Google's Geocoding API from here. This would give you an API key. Add this API Key in "GeocodingAPIKey.h" file.
 
 ### Usage
 
